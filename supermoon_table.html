@@ -8,7 +8,7 @@
 
 <body style="margin:0;">
 
-<section class="vi-compact-embed brand-vegasinsider" role="region" aria-labelledby="vi-compact-embed-title"
+<section class="vi-compact-embed brand-actionnetwork" role="region" aria-labelledby="vi-compact-embed-title"
   style="max-width:860px;margin:16px auto;font:14px/1.35 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
          color:#181a1f;background:#ffffff;border:1px solid #DCEFE6;border-radius:12px;
          box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 16px rgba(86,194,87,.10);">
@@ -48,6 +48,25 @@
     }
     /* (Canada Sports Betting / RotoGrinders can get their own overrides later) */
 
+   section.vi-compact-embed.brand-canadasb{
+      /* CSB red palette based on your Datawrapper table */
+      --brand-50:#FEF2F2;
+      --brand-100:#FEE2E2;
+      --brand-300:#FECACA;
+      --brand-500:#EF4444;
+      --brand-600:#DC2626;
+      --brand-700:#B91C1C;
+      --brand-900:#7F1D1D;
+      --border:#FECACA;
+      --hover-tint:#FBE9E9;
+      --hover-ring:#FECACA;
+      --hover-shadow:0 10px 24px rgba(127,29,29,.32);
+    } 
+    /* Reduce CSB logo size */
+    section.vi-compact-embed.brand-canadasb .vi-footer img {
+        height: 30px !important;
+        width: auto !important;
+    }
     /* Header */
     .vi-compact-embed .head{
       padding:14px 16px;border-bottom:1px solid var(--border)!important;color:#fff!important;
@@ -1161,8 +1180,8 @@
   <div class="vi-footer">
     <div class="footer-inner">
       <button id="copy-embed-btn" class="embed-btn" aria-controls="embed-wrapper" aria-expanded="false">🔗 Embed This Table</button>
-      <img src="https://i.postimg.cc/kGVJyXc1/VI-logo-final.png"
-           alt="VegasInsider logo"
+      <img src="https://i.postimg.cc/x1nG117r/AN-final2-logo.png"
+           alt="Action Network logo"
            width="120" height="auto" loading="lazy" decoding="async" />
     </div>
 
