@@ -8,7 +8,7 @@
 
 <body style="margin:0;">
 
-<section class="vi-compact-embed brand-actionnetwork" role="region" aria-labelledby="vi-compact-embed-title"
+<section class="vi-compact-embed brand-vegasinsider" role="region" aria-labelledby="vi-compact-embed-title"
   style="max-width:860px;margin:16px auto;font:14px/1.35 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
          color:#181a1f;background:#ffffff;border:1px solid #DCEFE6;border-radius:12px;
          box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 16px rgba(86,194,87,.10);">
@@ -46,7 +46,6 @@
       --hover-ring:#F2C23A;
       --hover-shadow:0 10px 24px rgba(0,0,0,.40);
     }
-    /* (Canada Sports Betting / RotoGrinders can get their own overrides later) */
 
     section.vi-compact-embed.brand-canadasb{
       /* CSB red palette based on your Datawrapper table */
@@ -61,6 +60,22 @@
       --hover-tint:#FBE9E9;
       --hover-ring:#FECACA;
       --hover-shadow:0 10px 24px rgba(127,29,29,.32);
+    }
+
+    section.vi-compact-embed.brand-rotogrinders{
+      /* RotoGrinders blue palette built around #0141A1 */
+      --brand-50:#E8F1FF;
+      --brand-100:#D3E3FF;
+      --brand-300:#9ABCF9;
+      --brand-500:#2F7DF3;
+      --brand-600:#0159D1;
+      --brand-700:#0141A1;  /* primary */
+      --brand-900:#011F54;
+
+      --border:#9ABCF9;
+      --hover-tint:rgba(1,65,161,.12);
+      --hover-ring:#2F7DF3;
+      --hover-shadow:0 10px 24px rgba(1,65,161,.35);
     }
 
     /* Header */
@@ -114,23 +129,23 @@
     .vi-compact-embed .bar.band-very-high{
       background: linear-gradient(90deg,var(--brand-900),var(--brand-600)) !important;
     }  /* >=25% */
-    
+
     .vi-compact-embed .bar.band-high{
       background: linear-gradient(90deg,var(--brand-700),var(--brand-500)) !important;
     }  /* 20–<25% */
-    
+
     .vi-compact-embed .bar.band-mid{
       background: linear-gradient(90deg,var(--brand-600),var(--brand-300)) !important;
     }  /* 15–<20% */
-    
+
     .vi-compact-embed .bar.band-low{
       background: linear-gradient(90deg,var(--brand-500),var(--brand-100)) !important;
     }  /* 10–<15% */
-    
+
     .vi-compact-embed .bar.band-very-low{
       background: linear-gradient(90deg,var(--brand-300),var(--brand-50)) !important;
     }  /* 5–<10% */
-    
+
     .vi-compact-embed .bar.band-tiny{
       background: linear-gradient(90deg,var(--brand-100),var(--brand-50)) !important;
     }  /* <5% */
@@ -302,7 +317,7 @@
       gap: 12px;
       position: relative;
     }
-    
+
     /* Desktop: vertically center the embed button in the footer strip */
     .vi-compact-embed .embed-btn {
       position: absolute;
@@ -328,22 +343,26 @@
       display: inline-block;
       filter: brightness(0) invert(1);
     }
-    
+
     /* Helps keep logos centered within the flex area */
     .vi-compact-embed .footer-inner img {
       margin: 0 auto;
     }
-    
-    /* Brand-specific logo sizes (desktop) */
+
+   /* Brand-specific logo sizes (desktop) */
     section.vi-compact-embed.brand-actionnetwork .vi-footer img {
-      height: 54px;  /* bumped up */
+      height: 44px;
     }
     section.vi-compact-embed.brand-vegasinsider .vi-footer img {
-      height: 32px;  /* leave as-is – already looks good */
+      height: 32px;
     }
     section.vi-compact-embed.brand-canadasb .vi-footer img {
-      height: 40px;  /* bumped up from 30px */
+      height: 40px;
     }
+    section.vi-compact-embed.brand-rotogrinders .vi-footer img {
+      height: 32px;
+    }
+
     .vi-compact-embed .embed-wrapper{
       position: absolute;
       bottom: calc(100% + 10px);
@@ -398,6 +417,7 @@
       }
       .vi-compact-embed .embed-btn{
         position:static !important;
+        transform:none !important;
         padding:6px 10px;
         font-size:12px;
         line-height:1.2;
@@ -1194,8 +1214,8 @@
   <div class="vi-footer">
     <div class="footer-inner">
       <button id="copy-embed-btn" class="embed-btn" aria-controls="embed-wrapper" aria-expanded="false">🔗 Embed This Table</button>
-      <img src="https://i.postimg.cc/x1nG117r/AN-final2-logo.png"
-           alt="Action Network logo"
+      <img src="https://i.postimg.cc/kGVJyXc1/VI-logo-final.png"
+           alt="VegasInsider logo"
            width="120" height="auto" loading="lazy" decoding="async" />
     </div>
 
