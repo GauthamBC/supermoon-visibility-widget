@@ -8,7 +8,7 @@
 
 <body style="margin:0;">
 
-<section class="vi-compact-embed" role="region" aria-labelledby="vi-compact-embed-title"
+<section class="vi-compact-embed brand-vegasinsider" role="region" aria-labelledby="vi-compact-embed-title"
   style="max-width:860px;margin:16px auto;font:14px/1.35 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
          color:#181a1f;background:#ffffff;border:1px solid #DCEFE6;border-radius:12px;
          box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 16px rgba(86,194,87,.10);">
@@ -30,6 +30,23 @@
       --ink:#181a1f; --muted:#666b73; --border:#DCEFE6; --viz-h:88px;
       --hover-tint: rgba(86,194,87,.12); --hover-ring:#BCE5D6; --hover-shadow:0 10px 24px rgba(86,194,87,.18);
     }
+
+    /* === Brand overrides ============================================= */
+    section.vi-compact-embed.brand-vegasinsider{
+      /* Gold + black palette from your sample */
+      --brand-50:#FFF7DC;
+      --brand-100:#FFE8AA;
+      --brand-300:#FFE8AA;
+      --brand-500:#F2C23A;
+      --brand-600:#D9A72A;
+      --brand-700:#B9851A;
+      --brand-900:#111111;
+      --border:#F2C23A;
+      --hover-tint: rgba(242,194,58,.20);
+      --hover-ring:#F2C23A;
+      --hover-shadow:0 10px 24px rgba(0,0,0,.40);
+    }
+    /* (Canada Sports Betting / RotoGrinders can get their own overrides later) */
 
     /* Header */
     .vi-compact-embed .head{
