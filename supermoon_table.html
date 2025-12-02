@@ -8,7 +8,7 @@
 
 <body style="margin:0;">
 
-<section class="vi-compact-embed brand-actionnetwork" role="region" aria-labelledby="vi-compact-embed-title"
+<section class="vi-compact-embed brand-canadasb" role="region" aria-labelledby="vi-compact-embed-title"
   style="max-width:860px;margin:16px auto;font:14px/1.35 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
          color:#181a1f;background:#ffffff;border:1px solid #DCEFE6;border-radius:12px;
          box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 16px rgba(86,194,87,.10);">
@@ -48,7 +48,7 @@
     }
     /* (Canada Sports Betting / RotoGrinders can get their own overrides later) */
 
-   section.vi-compact-embed.brand-canadasb{
+    section.vi-compact-embed.brand-canadasb{
       /* CSB red palette based on your Datawrapper table */
       --brand-50:#FEF2F2;
       --brand-100:#FEE2E2;
@@ -61,12 +61,8 @@
       --hover-tint:#FBE9E9;
       --hover-ring:#FECACA;
       --hover-shadow:0 10px 24px rgba(127,29,29,.32);
-    } 
-    /* Reduce CSB logo size */
-    section.vi-compact-embed.brand-canadasb .vi-footer img {
-        height: 30px !important;
-        width: auto !important;
     }
+
     /* Header */
     .vi-compact-embed .head{
       padding:14px 16px;border-bottom:1px solid var(--border)!important;color:#fff!important;
@@ -104,12 +100,11 @@
     .vi-compact-embed .chip{width:18px;height:18px;border-radius:50%;overflow:hidden;border:1px solid #cfe4da;background:#fff;flex-shrink:0}
     .vi-compact-embed .chip img{width:100%;height:100%;object-fit:cover}
 
-   .vi-compact-embed .metric{
+    .vi-compact-embed .metric{
       position: relative;
       height: 28px;
       border-radius: 999px;
-      /* Much paler track so the gold bar stands out */
-      background: #FFFDF5 !important;  /* near-white with a tiny warm tint */
+      background: #FFFDF5 !important;
       overflow: hidden;
     }
     .vi-compact-embed .bar{position:absolute;inset:0 auto 0 0;border-radius:999px;background:linear-gradient(90deg,var(--brand-600),var(--brand-500))!important;box-shadow:inset 0 0 0 1px rgba(0,0,0,.04)}
@@ -117,7 +112,6 @@
 
     /* Gradient bars by probability band (based on implied probability) */
     .vi-compact-embed .bar.band-very-high{
-      /* top band: darkest → strong */
       background: linear-gradient(90deg,var(--brand-900),var(--brand-600)) !important;
     }  /* >=25% */
     
@@ -292,6 +286,7 @@
       display: block !important;
       text-align: center;
       padding: 6px 0;
+      min-height: 64px;  /* keep footer strip same height across brands */
       border-top: 1px solid var(--border);
       background:
         radial-gradient(120% 140% at 85% 10%, rgba(255,255,255,.10) 0%, transparent 60%),
@@ -320,16 +315,23 @@
       border-color: var(--brand-700);
     }
     .vi-compact-embed .vi-footer img {
-      height: 52px;
+      height: 40px;            /* base logo size (Action Network) */
       width: auto;
       display: inline-block;
       filter: brightness(0) invert(1);
     }
-    
-    /* Make the VegasInsider logo a bit smaller on desktop */
-    section.vi-compact-embed.brand-vegasinsider .vi-footer img {
-      height: 36px;  /* tweak to 38–42px until it feels right */
+
+    /* Brand-specific logo sizes (desktop) */
+    section.vi-compact-embed.brand-actionnetwork .vi-footer img {
+      height: 40px;
     }
+    section.vi-compact-embed.brand-vegasinsider .vi-footer img {
+      height: 36px;
+    }
+    section.vi-compact-embed.brand-canadasb .vi-footer img {
+      height: 30px;
+    }
+
     .vi-compact-embed .embed-wrapper{
       position: absolute;
       bottom: calc(100% + 10px);
@@ -1180,8 +1182,8 @@
   <div class="vi-footer">
     <div class="footer-inner">
       <button id="copy-embed-btn" class="embed-btn" aria-controls="embed-wrapper" aria-expanded="false">🔗 Embed This Table</button>
-      <img src="https://i.postimg.cc/x1nG117r/AN-final2-logo.png"
-           alt="Action Network logo"
+      <img src="https://i.postimg.cc/ZKbrbPCJ/CSB-FN.png"
+           alt="Canada Sports Betting logo"
            width="120" height="auto" loading="lazy" decoding="async" />
     </div>
 
